@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% extends 'transfer_base.html' %}
+{% block title %}Message Board{% endblock %}
+{% block message %}留言板{% endblock %}
+{% block submessage %}Message Board{% endblock %}
+{% block main %}
+<hr>
+    <div class="body-info container">
+        <div class="row">
+            <p><a href='/post/'>留言</a></br></p>
+        </div>
+        <div class="row">
+            {% for user in response_string %}
+                <li> {{user.message_sentance}} </li>
+            {% empty %}
+                <p>There is no comments in the list</p>
+            {% endfor %}
+        </div>
+    </div>
+<hr>
+{% endblock %}

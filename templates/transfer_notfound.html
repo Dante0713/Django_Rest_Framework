@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+{% extends 'transfer_base.html' %}
+{% block title %}Can not found the link{% endblock %}
+{% block message %}找不到此網頁{% endblock %}
+{% block submessage %}Can not found the link{% endblock %}
+{% block main %}
+<h3>
+    Your site: {{ id }}<br>
+    can not found in DB. Please Go to
+    <a href="/admin/">administration</a>
+    site to add the link.
+</h3>
+{% endblock %}
